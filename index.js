@@ -26,25 +26,16 @@ const getSleepHours = (day) => {
 }
 
 const getActualSleepHours = () => {
-    return (
-        getSleepHours("Monday") +
-        getSleepHours("Tuesday") +
-        getSleepHours("Wednesday") +
-        getSleepHours("Thursday") +
-        getSleepHours("Friday") +
-        getSleepHours("Saturday") +
-        getSleepHours("Sunday")
-    );
+    6 + 7 + 8 + 9 + 10 + 11;
 };
 
-const getIdealSleepHours = () => {
-    idealHours = 6;
-    return idealHours * 7;
+const getIdealSleepHours = (idealHours) => {
+    idealHours * 7;
 };
 
 const calculateSleepDebt = () => {
     let actualSleepHours = getActualSleepHours();
-    let idealSleepHours = getIdealSleepHours();
+    let idealSleepHours = getIdealSleepHours(8);
     actualSleepHours === idealSleepHours 
     ? console.log(`You got the perfect amount of sleep!`) 
     : actualSleepHours > idealSleepHours 
